@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificação e Decodificação Base64 - Aula Manutenção de Software</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label, input, button, p {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #errorImage {
+            max-width: 100px; /* Ajuste o tamanho conforme necessário */
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Codificação e Decodificação Base64 - Manutenção de Software</h1>
+
+        <p>
+            <strong>O que é Base64?</strong><br>
+            Base64 é um método de codificação que converte dados binários em uma representação textual usando apenas caracteres imprimíveis. 
+            É comumente usado para codificar dados em sistemas que lidam com texto, como e-mails e URLs.
+             Cada grupo de 6 bits do dado binário é convertido em um caractere ASCII, 
+             resultando em uma string que pode ser facilmente manipulada e transmitida em formato de texto.
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong><br>
+            Suponha que você tenha o texto "Olá". A representação em ASCII dos caracteres é:<br>
+            - O: 79<br>
+            - l: 108<br>
+            - á: 225<br>
+            Quando codificado em Base64, o texto "Olá" se torna "T2xh".<br>
+            Você pode experimentar a codificação e decodificação desse exemplo usando os botões abaixo.
+        </p>
+        
+        <label for="inputText">Digite o texto:</label>
+        <input type="text" id="inputText" placeholder="Digite aqui...">
+        
+        <button onclick="encodeText()">Codificar</button>
+        <button onclick="decodeText()">Decodificar</button>
+        
+        <p><strong>Texto Resultante:</strong></p>
+        <p id="outputText"></p>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
